@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import MealCard from './components/mealCard';
+import Header from './components/header';
+
+
 import './App.css';
 
-function App() {
+
+const App = () => {
+
+  const [meals, setMeals] = useState([]);
+
+  const mealDBAPI = "https://www.themealdb.com/api/json/v1/1/";
+
+
+  const getRandomMeal = async() => {
+    const response = await fetch(`${mealDBAPI}random.php`);
+    const data = await response.json();
+    setMeals(data.meals);
+
+    //console.log(meal);
+  }
+
+
+  useEffect(() => {
+    console.log("I should only fire once");
+    getRandomMeal();
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+    <Header/>
+
+    {meals.length > 0 &&                 
+    <div className="container">
+       {meals.map((meal) => (<MealCard meal={meal} />))};
+
+
+      </div> 
+    } 
     </div>
+
+
   );
 }
 
