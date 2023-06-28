@@ -1,45 +1,44 @@
-import { useState, useEffect } from 'react';
-import MealCard from './components/mealCard';
-import Header from './components/header';
+import Header from './components/header/header';
+import Home from './pages/home';
+import About from './pages/about';
+import Recipes from './pages/recipes';
+import Search from './pages/search';
+import Footer from './components/footer/footer';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 
 
-import './App.css';
+
+import './App.scss';
 
 
 const App = () => {
 
-  const [meals, setMeals] = useState([]);
-
-  const mealDBAPI = "https://www.themealdb.com/api/json/v1/1/";
-
-
-  const getRandomMeal = async() => {
-    const response = await fetch(`${mealDBAPI}random.php`);
-    const data = await response.json();
-    setMeals(data.meals);
-
-    //console.log(meal);
-  }
-
-
-  useEffect(() => {
-    console.log("I should only fire once");
-    getRandomMeal();
-  }, []);
 
 
   return (
     <div>
 
     <Header/>
+    <div class="main-content">
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home/>}></Route>
+        <Route exact path="/about" element={<About/>}></Route>
+        <Route exact path="/recipes" element={<Recipes/>}></Route>
+        <Route exact path="/search" element={<Search/>}></Route>
 
-    {meals.length > 0 &&                 
-    <div className="container">
-       {meals.map((meal) => (<MealCard meal={meal} />))};
+      </Routes>
+    </Router>
+    </div>
 
 
-      </div> 
-    } 
+    <Footer/>
+
     </div>
 
 

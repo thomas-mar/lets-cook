@@ -1,0 +1,29 @@
+.footer{
+    width: 100%;
+    min-height: 100px;
+    background: #dc9a53;
+
+    .logo{
+        display: inline-block;
+        img{
+            padding-left: 25px;
+            width: 250px;
+
+        }
+    }
+
+    .search{
+        //display: inline-block;
+        float: right;
+        margin-right: 30px;
+        width: 33%;
+
+        input{
+            width: 75%;
+            display: inline-block;
+        }
+        button{
+            width: 20%;
+        }
+    }
+}
