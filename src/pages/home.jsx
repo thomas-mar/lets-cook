@@ -1,6 +1,6 @@
 import React from "react";  
 import { useState, useEffect } from "react";
-import MealCard from "../components/main/mealCard";
+import MealItem from "../components/main/mealItem";
 
 const Home = () => {
 
@@ -16,6 +16,8 @@ const Home = () => {
   
       //console.log(meal);
     }
+
+
   
   
     useEffect(() => {
@@ -36,7 +38,7 @@ const Home = () => {
           </div>
         </div>
         <div className="random-meal">
-            {meals.map((meal) => (<MealCard meal={meal} />))};
+            {meals.map(meal => (<MealItem meal={meal} />))};
         </div>
 
 
