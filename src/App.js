@@ -24,7 +24,7 @@ const App = () => {
     <div>
 
     <Header/>
-    <div class="main-content">
+    <div className="main-content">
     <Router>
       <Routes>
         <Route exact path="/" element={<Home/>}></Route>
