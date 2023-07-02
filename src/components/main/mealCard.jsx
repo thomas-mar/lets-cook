@@ -2,27 +2,23 @@ import React from "react";
 
 const MealCard = ({meal}) => {
 
-    meal.strInstructions = meal.strInstructions.replaceAll('\n', '<br/><br/>');
+    //meal.strInstructions = meal.strInstructions.replaceAll('\n', '<br/><br/>');
 
     return (
         <>
-        <div className="row">
-            <div className="col-12">
-                <h1>{meal.strMeal}</h1>
+        <div className="col-3 mb-3">
+            <div className="mealcard card h-100">  
+                <img class="card-img-top" src={meal.strMealThumb} alt={meal.strMeal}/>
+                <div className="card-body"> 
+                <h3 className="text-center">{meal.strMeal}</h3>
+
+                </div>
 
             </div>
 
         </div>
-        <div className="row">
-            <div className="col-8">
-                <h3>Instructions</h3>
-                <div dangerouslySetInnerHTML={{__html: meal.strInstructions}}></div>
 
-            </div>
-            <div className="col-4">
-                <img className="meal-image" src={meal.strMealThumb} alt={meal.strMeal}/>
-            </div>
-        </div>
+
 
         </>
     );
