@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Categories from "../components/main/categories";
 import MealCard from "../components/main/mealCard";
 
+
 const Recipes = () => {
 
     const [categories, setCategories] = useState([]);

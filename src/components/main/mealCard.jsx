@@ -10,7 +10,7 @@ const MealCard = ({meal}) => {
             <div className="mealcard card h-100">  
                 <img class="card-img-top" src={meal.strMealThumb} alt={meal.strMeal}/>
                 <div className="card-body"> 
-                <h3 className="text-center">{meal.strMeal}</h3>
+                <h3 className="text-center"><a href={'/meal?i=' + meal.idMeal}>{meal.strMeal}</a></h3>
 
                 </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const MealCard = ({meal}) => {
+const MealItem = ({meal}) => {
 
     meal.strInstructions = meal.strInstructions.replaceAll('\n', '<br/><br/>');
 
@@ -28,4 +28,4 @@ const MealCard = ({meal}) => {
     );
 }
 
-export default MealCard;
+export default MealItem;
