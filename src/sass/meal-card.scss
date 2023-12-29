@@ -1,3 +1,11 @@
 .meal-image{
     width: 100%;
 }
+
+.mealcard{
+    a{
+        font-weight: 600;
+        text-decoration: none;
+        color: $primary-color;
+    }
+}

@@ -1,0 +1,94 @@
+@import "variables";
+
+.meal-image{
+    width: 100%;
+}
+
+.card{
+    border-radius: 20px;
+}
+
+.btn{
+    font-weight: bold;
+
+    &.btn-primary{
+        background: $primary-color;
+        color: #FFF;
+        border: 2px solid $primary-color;
+        font-weight: bold;
+
+        &:hover{
+            background: $secondary-color;//darken($secondary-color, 10%);
+            
+            color: $primary-color;
+        }
+    }
+
+
+    &.btn-secondary{
+        background: $secondary-color;
+        color: $primary-color;
+        border: 2px solid $secondary-color;
+
+
+        &:hover{
+            background: $primary-color;
+            border: 2px solid $primary-color;
+
+            color: $white;
+        }
+    }
+}
+
+.main-content{
+    .bg{
+        &-primary{
+            background-color: $primary-color !important;
+
+            p{
+                color: $white;
+            }
+        }
+    
+        &-secondary{
+            background-color: $secondary-color !important;
+        }
+    }
+}
+
+
+
+.newsletter-subscribe{
+    img{
+        max-height: 300px;
+        object-fit: cover;
+    }
+}
+
+
+.custom-input-group {
+    position: relative;
+    //width: 300px;
+  }
+//   .custom-form-control {
+//     width: 100%;
+//     border: 1px solid #ccc;
+//     border-radius: 100px;
+//     padding: 10px 100px 10px 20px; 
+//     line-height: 1;
+//     box-sizing: border-box;
+//     outline: none;
+//   }
+  .custom-input-button {
+    position: absolute;
+    right: 3px; 
+    top: 3px;
+    bottom: 3px;
+    border: 0;
+    color: #fff;
+    outline: none;
+    margin: 0;
+    padding: 0 10px;
+    z-index: 2;
+  }
+

@@ -7,8 +7,8 @@ const MealCard = ({meal}) => {
     return (
         <>
         <div className="col-3 mb-3">
-            <div className="mealcard card h-100">  
-                <img class="card-img-top" src={meal.strMealThumb} alt={meal.strMeal}/>
+            <div className="mealcard card h-100 rounded-4">  
+                <img class="card-img-top rounded-top-4" src={meal.strMealThumb} alt={meal.strMeal}/>
                 <div className="card-body"> 
                 <h3 className="text-center"><a href={'/meal?i=' + meal.idMeal}>{meal.strMeal}</a></h3>
 

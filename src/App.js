@@ -5,6 +5,8 @@ import Recipes from './pages/recipes';
 import Meal from './pages/meal';
 import Search from './pages/search';
 import Footer from './components/footer/footer';
+import React, { useEffect, useState } from 'react';
+
 
 import {
   BrowserRouter as Router,
@@ -18,13 +20,15 @@ import './App.scss';
 
 
 const App = () => {
+  const [start, setStart] = useState(true);
 
-
+  
 
   return (
     <div>
+    <div>
 
-    <Header/>
+          <Header/>
     <div className="main-content">
     <Router>
       <Routes>
@@ -41,6 +45,8 @@ const App = () => {
 
 
     <Footer/>
+    </div>
+    
 
     </div>
 

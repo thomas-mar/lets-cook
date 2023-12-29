@@ -1,0 +1,10 @@
+.banner{
+    &.banner-hero{
+        height: 575px;
+        background: center / cover no-repeat url(../../public/assets/images/banner/louis-hansel.jpg);
+        h1{
+            color: #006d92;
+        }
+    }
+}
+
